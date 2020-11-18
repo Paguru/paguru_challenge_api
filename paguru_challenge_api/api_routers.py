@@ -5,7 +5,7 @@ from rest_framework import routers
 from accounts.viewsets import UserViewSet
 from posts.viewsets import PostViewSet
 
-router = routers.DefaultRouter(trailing_slash=False)
+router = routers.DefaultRouter()
 
 router.register('users', UserViewSet)
 router.register('posts', PostViewSet)
