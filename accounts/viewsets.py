@@ -10,6 +10,7 @@ User = get_user_model()
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    http_method_names = ['get', 'post']
 
     def get_permissions(self):
         if self.request.method == 'POST':
@@ -21,3 +22,4 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'list':
             return UserDetailSerializer
         return UserSerializer
+
