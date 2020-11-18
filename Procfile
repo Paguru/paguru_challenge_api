@@ -1,0 +1,1 @@
+web: gunicorn paguru_challenge_api.wsgi --log-file -
